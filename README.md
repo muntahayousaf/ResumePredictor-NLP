@@ -58,6 +58,7 @@ Used **Regular Expressions (re)** and **NLTK** for advanced text preprocessing:
 
 ```bash
 streamlit run app2.py
+```
 
 ---
 
