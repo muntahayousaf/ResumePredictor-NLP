@@ -4,6 +4,8 @@ numpy
 scikit-learn
 nltk
 re
+seaborn 
+matplotlib
 
 # Web App Deployment
 streamlit
