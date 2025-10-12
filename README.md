@@ -48,7 +48,7 @@ Used **Regular Expressions (re)** and **NLTK** for advanced text preprocessing:
 | **Language** | Python |
 | **Libraries** | Pandas, NumPy, Scikit-learn, NLTK, re |
 | **Vectorization** | TF-IDF |
-| **Model** | Logistic Regression / Naive Bayes |
+| **Model** | KNeighborsClassifier |
 | **Deployment** | Streamlit |
 | **Serialization** | Pickle |
 
