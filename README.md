@@ -54,5 +54,7 @@ Used **Regular Expressions (re)** and **NLTK** for advanced text preprocessing:
 
 ---
 
+Run Streamlit App
+
 ```bash
 streamlit run app2.py
