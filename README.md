@@ -63,7 +63,7 @@ streamlit run app2.py
 ---
 
 ## 👩‍💻 Author
-**Muntaha**  
+**Muntaha Yousaf**  
 💼 Data Science & Machine Learning Enthusiast  
 📧 Email: yourname5example.com  
 🌐 GitHub: [muntahayousaf](https://github.com/muntahayousaf)
