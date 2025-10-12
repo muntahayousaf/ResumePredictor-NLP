@@ -28,42 +28,46 @@ def main():
 
     if uploaded_file is not None:
         try:
+            # Read and decode uploaded file
             resume_bytes = uploaded_file.read()
-            resume_text = resume_bytes.decode('utf-8')
+            resume_text = resume_bytes.decode('utf-8', errors='ignore')
         except UnicodeDecodeError:
-            resume_text = resume_bytes.decode('latin-1')
+            resume_text = resume_bytes.decode('latin-1', errors='ignore')
 
-        cleaned_resume = cleanresume([resume_text])
-        cleaned_resume = tfidf.transform([cleaned_resume])
+        # Clean and predict
+        cleaned_resume = cleanresume(resume_text)        # ✅ no [ ]
+        cleaned_resume = tfidf.transform([cleaned_resume])  # ✅ keep [ ] here for model input
         prediction_id = clf.predict(cleaned_resume)[0]
-        st.write(prediction_id)
+
+        # Show raw prediction ID (optional)
+        st.write("Prediction ID:", prediction_id)
 
         category_mapping = {
-        15: "Java Developer" , 
-        23: "Testing" ,
-        8: "DevOps Engineer" ,
-        20: "Python Developer" ,
-        24: "Web Designing" ,
-        12: "HR" ,
-        13: "Hadoop" ,
-        22: "Sales" ,
-        6: "Data Science" ,
-        16: "Mechanical Engineer" ,
-        10: "ETL Developer" ,
-        3: "Blockchain" ,
-        18: "Operations Manager" ,
-        1: "Arts" ,
-        7: "Database" ,
-        14: "Health and fitness" ,
-        19: "PMO" ,
-        11: "Electrical Engineeringr" ,
-        4: "Business Analystr" ,
-        9: "DotNet Developer" ,
-        2: "Automation Testing" ,
-        17: "Network Security Engineer" ,
-        5: "Civil Engineer" ,
-        21: "SAP Developer" ,
-        0: "Advocate" ,
+            15: "Java Developer" , 
+            23: "Testing" ,
+            8: "DevOps Engineer" ,
+            20: "Python Developer" ,
+            24: "Web Designing" ,
+            12: "HR" ,
+            13: "Hadoop" ,
+            22: "Sales" ,
+            6: "Data Science" ,
+            16: "Mechanical Engineer" ,
+            10: "ETL Developer" ,
+            3: "Blockchain" ,
+            18: "Operations Manager" ,
+            1: "Arts" ,
+            7: "Database" ,
+            14: "Health and fitness" ,
+            19: "PMO" ,
+            11: "Electrical Engineeringr" ,
+            4: "Business Analystr" ,
+            9: "DotNet Developer" ,
+            2: "Automation Testing" ,
+            17: "Network Security Engineer" ,
+            5: "Civil Engineer" ,
+            21: "SAP Developer" ,
+            0: "Advocate" ,
         }
 
         category_name = category_mapping.get(prediction_id , 'Unknown')
