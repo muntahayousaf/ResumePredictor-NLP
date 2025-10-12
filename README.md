@@ -1,4 +1,4 @@
-# ResumePredictor-# 🧠 Resume Category Prediction using NLP & Machine Learning
+🧠 Resume Category Prediction using NLP & Machine Learning
 
 ## 📘 Overview
 This project is a **Resume Category Prediction App** built using **Natural Language Processing (NLP)** and **Machine Learning**.  
