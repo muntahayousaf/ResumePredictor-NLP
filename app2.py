@@ -28,18 +28,16 @@ def main():
 
     if uploaded_file is not None:
         try:
-            # Read and decode uploaded file
             resume_bytes = uploaded_file.read()
             resume_text = resume_bytes.decode('utf-8', errors='ignore')
         except UnicodeDecodeError:
             resume_text = resume_bytes.decode('latin-1', errors='ignore')
 
         # Clean and predict
-        cleaned_resume = cleanresume(resume_text)        # ✅ no [ ]
-        cleaned_resume = tfidf.transform([cleaned_resume])  # ✅ keep [ ] here for model input
+        cleaned_resume = cleanresume(resume_text)      
+        cleaned_resume = tfidf.transform([cleaned_resume]) 
         prediction_id = clf.predict(cleaned_resume)[0]
 
-        # Show raw prediction ID (optional)
         st.write("Prediction ID:", prediction_id)
 
         category_mapping = {
