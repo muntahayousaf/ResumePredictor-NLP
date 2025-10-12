@@ -1,0 +1,9 @@
+# Core Libraries
+pandas
+numpy
+scikit-learn
+nltk
+re
+
+# Web App Deployment
+streamlit
