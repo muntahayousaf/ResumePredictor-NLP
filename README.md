@@ -58,3 +58,11 @@ Used **Regular Expressions (re)** and **NLTK** for advanced text preprocessing:
 
 ```bash
 streamlit run app2.py
+
+---
+
+## 👩‍💻 Author
+**Muntaha**  
+💼 Data Science & Machine Learning Enthusiast  
+📧 Email: yourname5example.com  
+🌐 GitHub: [muntahayousaf](https://github.com/muntahayousaf)
