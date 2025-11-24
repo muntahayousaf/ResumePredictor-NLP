@@ -46,7 +46,7 @@ Used **Regular Expressions (re)** and **NLTK** for advanced text preprocessing:
 | Category | Tools / Libraries |
 |-----------|-------------------|
 | **Language** | Python |
-| **Libraries** | Pandas, NumPy, Scikit-learn, NLTK, re , seaborn , matplotlib |
+| **Libraries** | Pandas, NumPy, Scikit-learn, NLTK, re , seaborn, matplotlib |
 | **Vectorization** | TF-IDF |
 | **Model** | KNeighborsClassifier |
 | **Deployment** | Streamlit |
